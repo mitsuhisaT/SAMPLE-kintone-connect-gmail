@@ -1,17 +1,21 @@
 /**!
  * JSCustomize on kintone - kintone and mail service
  *
- * App: kintone - Mail service
+ * plug-in: kintone - Mail service
  *
  * Copyright (c) 2017 Cybozu
+ * Copyright (c) 2020 PCI Thecno
  *
  * Licensed under the MIT License
  */
-(function (PLUGIN_ID, KC, GAPI) {
+jQuery.noConflict();
+
+(function ($, PLUGIN_ID, KC, GAPI) {
     'use strict';
     if (KC === null) {
         return;
     }
+    var conf = kintone.plugin.app.getConfig(PLUGIN_ID);
     var gmailAPI, kintoneMailService;
     kintoneMailService = {
         lang: {
@@ -64,7 +68,7 @@
             lang: 'en',
             i18n: {},
             app: {
-                appClientID: "", /* Your google app client ID */
+                appClientID: conf.client_id, /* get from plugin, my google app client ID */
                 fieldsCode: {
                     attachment: "attachment",
                     bcc: "bcc",
@@ -1137,4 +1141,4 @@
     };
 
     kintoneMailService.init();
-})(kintone.$PLUGIN_ID, window.kintoneCustomize || null, window.gapi);
+})(jQuery, kintone.$PLUGIN_ID, window.kintoneCustomize || null, window.gapi);

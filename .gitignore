@@ -114,3 +114,17 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+package-lock.json
+yarn.lock
+
+# kintone
+plugin.zip
+plugin.ppk
+*.ppk
+
+# G-suite
+client_id.json
+
+# macOS
+.DS_Store
