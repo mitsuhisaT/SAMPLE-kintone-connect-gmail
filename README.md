@@ -152,4 +152,5 @@ Copyright(c) Cybozu, Inc.
 
 # get from git
 
-[SAMPLE-kintone-connect-gmail](https://github.com/kintone-samples/SAMPLE-kintone-connect-gmail)
+plugin version [SAMPLE-kintone-connect-gmail](https://github.com/mitsuhisaT/SAMPLE-kintone-connect-gmail)  
+original [SAMPLE-kintone-connect-gmail](https://github.com/kintone-samples/SAMPLE-kintone-connect-gmail)  
